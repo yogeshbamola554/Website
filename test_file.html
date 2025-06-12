@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertical Scrolling Notice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .notice-container {
+      width: 100%;
+      max-width: 400px;
+      height: 200px;
+      margin: 50px auto;
+      overflow: hidden;
+      border: 2px solid #333;
+      background-color: #f9f9f9;
+      position: relative;
+    }
+
+    .notice-heading {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .notice-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      animation: scroll-up 10s linear infinite;
+    }
+
+    .notice-list li {
+      padding: 10px 15px;
+      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    @keyframes scroll-up {
+      0% {
+        top: 100%;
+      }
+      100% {
+        top: -100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="notice-container">
+    <div class="notice-heading">📢 Latest Notices</div>
+    <ul class="notice-list">
+      <li>Admission Open for 2025-26</li>
+      <li>Annual Day Celebration on 20th June</li>
+      <li>PTM Scheduled for 15th June</li>
+      <li>Summer Holidays from 1st July</li>
+      <li>New Uniform Guidelines Updated</li>
+      <li>Science Exhibition: Register by 25th June</li>
+    </ul>
+  </div>
+
+</body>
+</html>
